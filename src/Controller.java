@@ -15,11 +15,11 @@ public class Controller {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		inputString(command);
+		inputString();
 		
 	}
 
-	public static void inputString(String command) {
+	public static void inputString() {
 		System.out.print("Enter command: ");
 		command = scanStr.nextLine().toLowerCase();
 		 String[] commandSplit = command.split(" ");
@@ -31,35 +31,35 @@ public class Controller {
 		else if (command.equals("register observers")) {
 			if (TextState.observerSize > 0) {
 				System.out.println("Cannot register observer");
-				inputString(command);
+				inputString();
 			}
 			else {
 			textState.registerObservers(oreva);
 			textState.registerObservers(pritha);
 			textState.registerObservers(abdul);
 			TextState.printwaitingObserver();
-			inputString(command);
+			inputString();
 			}
 		}
 		else if (command.equals("status")) {;
 			textState.status(oreva);
 			textState.status(pritha);
 			textState.status(abdul);
-			inputString(command);
+			inputString();
 		}	
 		
 		else if (command.equals("unregister")) {
 			int arrySz = TextState.observerSize;
 			if (arrySz == 0) {
 				System.out.println("No observer to remove");
-				inputString(command);
+				inputString();
 			}
 			else {
 			textState.removeObserver(oreva);
 			textState.removeObserver(pritha);
 			textState.removeObserver(abdul);
 			System.out.println("All Observers unregistered");	
-			inputString(command);
+			inputString();
 			}
 		}
 		else if (commandSplit[0].equals("send")) {
@@ -105,12 +105,12 @@ public class Controller {
 		        }
 			}
 			textState.notifyObservers(command, vArray, cArray, dArray);
-			inputString(command);
+			inputString();
 		
 			}
 		else {
 			System.out.println("Unknown command");
-			inputString(command);
+			inputString();
 		}
 				
 	}
