@@ -1,6 +1,4 @@
-# hw5
-The Observer pattern assignment
-Assignment 5 from group 4 of the COMP830 class.
+# hw5 - The Observer pattern assignment
 
 Use Case is described below.
 
